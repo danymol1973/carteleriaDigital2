@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tuNeon_burguer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script> <!--con defer carga html1°-->
+</head>
+<body>
+      <div class="pantalla-menu">
+    
+    <!-- LADO IZQUIERDO: Video continuo -->
+    <div class="seccion-visual">
+      <video autoplay muted loop class="video-loop">
+        <source src="https://www.dropbox.com/scl/fi/5zgvuda9eufy3a16uckx2/m.mp4?rlkey=wx5ppxs8td47l7mnv0qx53adj&st=6rwwep9z&dl=1" type="video/mp4">
+        no es compatible con tu reproductor.
+      </video>
+    </div>
+
+    <!-- LADO DERECHO: Menú estático editable -->
+    <div class="seccion-texto">
+      <h1 class="titulo-combo">NEON burguer</h1>
+      
+      <ul class="lista-combo">
+        <li>Hamburguesa Doble Carne con Queso</li>
+        <li>Papas Fritas Medianas Crujientes</li>
+        <li>Gaseosa Grande DANIEL 500ml</li>
+        <li>Empanadas</li>
+      </ul>
+
+      <div class="contenedor-precio">
+        <span class="texto-total">Precio Total</span>
+        <!-- Ponemos un ID para que JavaScript lo encuentre fácilmente en la Fase 2 -->
+        <span class="monto-precio" id="precio-combo">$0.00</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Aquí conectaremos JavaScript en la siguiente fase -->
+ <!-- <script>
+    // Inicialización manual para la Fase 1
+    document.getElementById('precio-combo').innerText = "$22.50";
+  </script>-->
+</body>
+</html>

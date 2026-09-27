@@ -1,0 +1,120 @@
+ 
+    /* Estilos globales y reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #0b0b0b;
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    /* Contenedor principal Grid 50/50 */
+    .pantalla-menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Mitad y mitad */
+      width: 100vw;
+      height: 100vh;
+    }
+
+    /* LADO IZQUIERDO: Video en Loop */
+    .seccion-visual {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .video-loop {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ajusta el video sin deformarlo */
+    }
+
+    /* LADO DERECHO: Tarjeta estática con precios */
+    .seccion-texto {
+      background-color: #141414;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5% 8%;
+      color: #ffffff;
+      border-left: 4px solid #ffcc00; /* Detalle estético en amarillo */
+    }
+
+    .titulo-combo {
+      font-size: 3.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #ffcc00;
+      margin-bottom: 20px;
+    }
+
+    /* Lista de ítems del combo */
+    .lista-combo {
+      list-style: none;
+      margin-bottom: 40px;
+    }
+    .lista-combo li {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    .lista-combo li::before {
+      content: "✓";
+      color: #ffcc00;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    /* Contenedor del Precio Destacado */
+    .contenedor-precio {
+      background-color: #ffcc00;
+      color: #000000;
+      padding: 15px 30px;
+      border-radius: 10px;
+      align-self: flex-start; /* No ocupa todo el ancho */
+      box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3);
+    }
+
+    /* Animación de pulso para el contenedor del precio */
+.contenedor-precio {
+  background-color: #ffcc00;
+  color: #000000;
+  padding: 15px 30px;
+  border-radius: 10px;
+  align-self: flex-start;
+  box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3);
+  
+  /* Conectamos la animación: durará 2 segundos y se repetirá infinitamente */
+  animation: pulsoAtencion 2s infinite ease-in-out;
+}
+
+@keyframes pulsoAtencion {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.04); /* Se agranda un poquito */
+    box-shadow: 0 12px 30px rgba(255, 204, 0, 0.6); /* Brilla más */
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3);
+  }
+}
+
+    .texto-total {
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      display: block;
+      letter-spacing: 2px;
+    }
+    .monto-precio {
+      font-size: 4rem;
+      font-weight: 900;
+    }
+  
